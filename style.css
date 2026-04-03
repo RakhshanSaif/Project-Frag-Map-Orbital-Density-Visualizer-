@@ -1,0 +1,168 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #0a0a0a;
+        color: #00ffcc;
+        font-family: monospace;
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: #111;
+        border-bottom: 1px solid #00ffcc;
+    }
+
+    .nav-logo {
+        color: cyan;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links span {
+        margin: 0 15px;
+        cursor: pointer;
+        color: #00ffcc;
+    }
+
+    .nav-links span:hover {
+        color: cyan;
+    }
+
+    .nav-user button {
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    #status {
+        color: yellow;
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .controls {
+        margin: 20px;
+    }
+
+    input[type="range"] {
+        width: 300px;
+        margin: 10px;
+    }
+
+    input[type="text"] {
+        background: #111;
+        color: #00ffcc;
+        border: 1px solid #00ffcc;
+        padding: 8px;
+        width: 200px;
+        font-family: monospace;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin: 5px;
+        background: #00ffcc;
+        color: black;
+        border: none;
+        cursor: pointer;
+        font-family: monospace;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background: cyan;
+    }
+
+    button:disabled {
+        background: #555;
+        color: #999;
+        cursor: not-allowed;
+    }
+
+    .dashboard {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    #satelliteList, #summary {
+        border: 1px solid #00ffcc;
+        padding: 20px;
+        width: 45%;
+        min-height: 300px;
+        text-align: left;
+        box-shadow: 0 0 10px #00ffcc;
+        overflow-y: auto;
+        max-height: 500px;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .subtitle {
+        color: #00ffcc;
+        margin-bottom: 30px;
+    }
+
+    .login-box {
+        border: 1px solid #00ffcc;
+        padding: 30px;
+        width: 350px;
+        box-shadow: 0 0 20px #00ffcc;
+    }
+
+    .login-box input,
+    .login-box select {
+        background: #111;
+        color: #00ffcc;
+        border: 1px solid #00ffcc;
+        padding: 10px;
+        width: 100%;
+        margin: 8px 0;
+        font-family: monospace;
+    }
+
+    .main-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background: #00ffcc;
+        color: black;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .tab-buttons {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+        flex: 1;
+        background: #111;
+        color: #00ffcc;
+        border: 1px solid #00ffcc;
+    }
+
+    .tab-active {
+        background: #00ffcc !important;
+        color: black !important;
+    }
