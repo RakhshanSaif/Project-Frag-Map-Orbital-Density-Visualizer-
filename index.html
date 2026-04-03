@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frag Map - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <span class="nav-logo">🚀 Frag Map</span>
+    <div class="nav-links">
+        <span>Dashboard</span>
+        <span>Satellites</span>
+        <span>Analytics</span>
+        <span>Reports</span>
+    </div>
+    <div class="nav-user">
+        <span id="navUser"></span>
+        <button onclick="DB.logout()">Logout</button>
+    </div>
+</div>
+
+<p id="status">⏳ Loading live orbital data...</p>
+
+<div class="controls">
+    <input type="range" id="slider" min="200" max="1000" value="500">
+    <p id="sliderValue">Altitude: 500 km</p>
+    <br>
+    <input type="text" id="searchBar" placeholder="🔍 Search satellite name...">
+    <button onclick="searchSatellite()">Search</button>
+    <button id="fetchBtn" onclick="manualFetch()">🌐 Fetch Live Data</button>
+    <button onclick="stopAutoUpdate()">⏹ Stop Auto-Update</button>
+    <button id="analyzeBtn">Analyze Space</button>
+    <button id="reportBtn">Health Report</button>
+    <button onclick="downloadReport()">⬇ Download Report</button>
+</div>
+
+<div class="dashboard">
+    <div id="satelliteList">
+        <h3>🛰 Satellite / Debris Data</h3>
+    </div>
+    <div id="summary">
+        <h3>📊 Risk Summary</h3>
+    </div>
+</div>
+
+<!-- LOAD SCRIPTS IN CORRECT ORDER -->
+<script>
+// Inline satellite.js fallback check
+window.satelliteLibLoaded = false;
+</script>
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/satellite.js/4.1.4/satellite.min.js"
+    onload="window.satelliteLibLoaded = true; console.log('✅ satellite.js loaded');"
+    onerror="console.error('❌ satellite.js failed to load');">
+</script>
+<script src="database.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
